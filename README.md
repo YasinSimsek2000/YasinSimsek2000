@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Yasin Şimşek. I am a computer engineering student at Hacettepe University.
 - 👀 I’m interested in trying to solve competitive problems and designing useful apps.
-- 🌱 I’m currently studying HTML, CSS, Javascript.
+- 🌱 I’m interested in Full-Stack Development.
 - 🏆 I will add the certificates I have earned into this repository.
 
 Some Links
