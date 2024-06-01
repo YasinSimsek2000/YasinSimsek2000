@@ -1,9 +1,14 @@
 - 👋 Hi, I’m Yasin Şimşek. I am a computer engineering student at Hacettepe University.
-- 👀 I’m interested in trying to solve competitive problems and designing useful apps.
-- 🏆 I will add the certificates I have earned into this repository.
+- 👀 I am interested in trying to solve competitive problems and designing useful apps.
+- 👀 I am studying on blockchain technologies.
 
 Some Links
 
-- https://www.hackerrank.com/Yasin_Simsek : HackerRank Profile
-- https://www.hackerrank.com/certificates/64362adfbc0a : Java (Basic) Certificate Link
-- https://www.hackerrank.com/certificates/37cbd68c2183 : Problem Solving (Basic) Certificate Link
+- HackerRank Profile : https://www.hackerrank.com/Yasin_Simsek 
+- LeetCode Profile   : https://leetcode.com/u/YasinSimsek2000/
+
+<a href="">
+  <img align="centre" src="https://github-readme-stats.vercel.app/api?username=YasinSimsek2000&count_private=true&include_all_commits=true&show_icons=true&title_color=007bff&text_color=e7e7e7&icon_color=007bff&bg_color=171c28" />
+<a />
+  
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=serkankaragoz&layout=compact&title_color=007bff&text_color=e7e7e7&icon_color=007bff&bg_color=171c28)
