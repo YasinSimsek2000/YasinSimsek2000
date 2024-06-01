@@ -11,4 +11,4 @@ Some Links
   <img align="centre" src="https://github-readme-stats.vercel.app/api?username=YasinSimsek2000&count_private=true&include_all_commits=true&show_icons=true&title_color=007bff&text_color=e7e7e7&icon_color=007bff&bg_color=171c28" />
 <a />
   
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=serkankaragoz&layout=compact&title_color=007bff&text_color=e7e7e7&icon_color=007bff&bg_color=171c28)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=YasinSimsek2000&layout=compact&title_color=007bff&text_color=e7e7e7&icon_color=007bff&bg_color=171c28)
