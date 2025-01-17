@@ -1,6 +1,6 @@
-- 👋 Hi, I’m Yasin Şimşek. I am a computer engineering student at Hacettepe University.
+- 👋 Hi, I’m Yasin Şimşek. I am a computer engineer. 
 - 👀 I am interested in trying to solve competitive problems and designing useful apps.
-- 👀 I am studying on blockchain technologies.
+- 👀 I am studying on blockchain technologies and cryptography.
 
 Some Links
 
