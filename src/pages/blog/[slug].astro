@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../../content/en/blog/*.md');
+  return posts.map(post => {
+    const slug = post.file.split('/').pop()?.replace('.md', '') ?? '';
+    return { params: { slug }, props: { post } };
+  });
+}
+
+const { post } = Astro.props;
+const { Content, frontmatter } = post;
+const title = frontmatter.title ?? 'Post';
+const date = frontmatter.date ?? '';
+---
+<Base title={`${title} — Your Name`} lang="en">
+  <div class="container">
+    <header class="article-header">
+      {date && <time>{date}</time>}
+      <h1>{title}</h1>
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </div>
+</Base>

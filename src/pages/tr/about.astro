@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const files = await Astro.glob('../../content/tr/about.md');
+const about = files[0];
+const { Content, frontmatter } = about;
+const photo = frontmatter.photo ?? null;
+const base = import.meta.env.BASE_URL;
+---
+<Base title="Hakkımda — Adınız" lang="tr">
+  <div class="container">
+    <header class="page-header">
+      <p class="label">Hakkımda</p>
+      <h1>Hakkımda</h1>
+    </header>
+
+    <div class={photo ? 'about-grid' : ''}>
+      <div class="prose about-bio">
+        <Content />
+      </div>
+      {photo && (
+        <img src={`${base}${photo}`} alt="Fotoğraf" class="about-photo" />
+      )}
+    </div>
+  </div>
+</Base>

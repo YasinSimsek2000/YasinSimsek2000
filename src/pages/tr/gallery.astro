@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const files = await Astro.glob('../../content/tr/gallery.md');
+const gallery = files[0];
+const images: { src: string; caption?: string }[] = gallery?.frontmatter?.images ?? [];
+const base = import.meta.env.BASE_URL;
+---
+<Base title="Galeri — Adınız" lang="tr">
+  <div class="container">
+    <header class="page-header">
+      <p class="label">Galeri</p>
+      <h1>Galeri</h1>
+      <p>Görsel bir koleksiyon.</p>
+    </header>
+
+    {images.length === 0 && (
+      <p style="color:var(--muted)">
+        Henüz fotoğraf yok. <code>src/content/tr/gallery.md</code> dosyasını düzenleyin.
+      </p>
+    )}
+
+    <div class="gallery-grid">
+      {images.map(img => (
+        <figure class="gallery-item">
+          <img src={`${base}${img.src}`} alt={img.caption ?? ''} loading="lazy" />
+          {img.caption && <figcaption class="gallery-caption">{img.caption}</figcaption>}
+        </figure>
+      ))}
+    </div>
+  </div>
+</Base>

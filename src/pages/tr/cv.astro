@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const files = await Astro.glob('../../content/tr/cv.md');
+const cv = files[0];
+const { Content } = cv;
+---
+<Base title="ÖZGEÇMİŞ — Adınız" lang="tr">
+  <div class="container">
+    <header class="page-header">
+      <p class="label">Özgeçmiş</p>
+      <h1>ÖZGEÇMİŞ</h1>
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,64 @@
+---
+import '../styles/global.css';
+const { title = 'My Site', description = '', lang = 'en' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+// Build alternate language URL from current path
+const currentPath = Astro.url.pathname.replace(base.replace(/\/$/, ''), '') || '/';
+let altPath: string;
+if (lang === 'tr') {
+  altPath = currentPath.replace(/^\/tr/, '') || '/';
+} else {
+  altPath = '/tr' + (currentPath === '/' ? '/' : currentPath);
+}
+const altHref = base + altPath.replace(/^\//, '');
+
+const navItems = lang === 'tr'
+  ? [
+      { href: `${base}tr/about/`, label: 'Hakkımda' },
+      { href: `${base}tr/cv/`, label: 'Özgeçmiş' },
+      { href: `${base}tr/blog/`, label: 'Blog' },
+      { href: `${base}tr/gallery/`, label: 'Galeri' },
+    ]
+  : [
+      { href: `${base}about/`, label: 'About' },
+      { href: `${base}cv/`, label: 'CV' },
+      { href: `${base}blog/`, label: 'Blog' },
+      { href: `${base}gallery/`, label: 'Gallery' },
+    ];
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  {description && <meta name="description" content={description} />}
+  <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+</head>
+<body>
+  <nav>
+    <div class="inner">
+      <a href={lang === 'tr' ? `${base}tr/` : base} class="nav-brand">Yasin Şimşek</a>
+      <ul class="nav-links">
+        {navItems.map(item => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+        <li>
+          <a href={altHref} class="lang-btn" title={lang === 'tr' ? 'Switch to English' : "Türkçe'ye geç"}>
+            {lang === 'tr' ? 'EN' : 'TR'}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>
+    <p>© {new Date().getFullYear()} Yasin Şimşek · Built with Astro</p>
+  </footer>
+</body>
+</html>

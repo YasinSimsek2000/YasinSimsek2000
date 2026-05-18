@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const posts = await Astro.glob('../../content/en/blog/*.md');
+const sorted = posts
+  .map(p => ({
+    title: p.frontmatter.title ?? 'Untitled',
+    date: p.frontmatter.date ?? '',
+    description: p.frontmatter.description ?? '',
+    slug: p.file.split('/').pop()?.replace('.md', ''),
+  }))
+  .sort((a, b) => (a.date < b.date ? 1 : -1));
+
+const base = import.meta.env.BASE_URL;
+---
+<Base title="Blog — Your Name" lang="en">
+  <div class="container">
+    <header class="page-header">
+      <p class="label">Blog</p>
+      <h1>Writing</h1>
+      <p>Thoughts on things I find interesting.</p>
+    </header>
+
+    {sorted.length === 0 && (
+      <p style="color:var(--muted)">No posts yet. Add a markdown file to <code>src/content/blog/</code>.</p>
+    )}
+
+    <ul class="post-list">
+      {sorted.map(post => (
+        <li class="post-item">
+          <time class="post-date">{post.date}</time>
+          <div>
+            <h2 class="post-title">
+              <a href={`${base}blog/${post.slug}/`}>{post.title}</a>
+            </h2>
+            {post.description && <p class="post-desc">{post.description}</p>}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>
