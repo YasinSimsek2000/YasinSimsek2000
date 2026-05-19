@@ -1,11 +1,7 @@
 ---
 images:
-  - src: images/gallery/photo1.jpg
-    caption: Bu fotoğraf için bir açıklama
-  - src: images/gallery/photo2.jpg
-    caption: Başka bir fotoğraf
-  - src: images/gallery/photo3.jpg
-    caption: Ve bir tane daha
+  - src: public/images/favicon.svg
+    caption: Name
 ---
 
 <!--
