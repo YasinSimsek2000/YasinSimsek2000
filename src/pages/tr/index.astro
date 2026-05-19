@@ -2,34 +2,31 @@
 import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL;
 ---
-<Base title="Adınız" lang="tr">
+
+<Base title="Yasin Şimşek" lang="tr">
   <div class="container">
     <section class="hero">
       <p class="hero-label">Portfolyo & Blog</p>
-      <h1>Merhaba, ben<br /><em>Adınız</em></h1>
+      <h1>Merhaba, ben<br /><em>Yasin Şimşek</em></h1>
       <p>
-        Kendiniz hakkında kısa bir tanıtım — ne yaptığınız, neye önem verdiğiniz
-        ve ziyaretçilerin burada neler bulabileceği.
+        Blokzincir teknolojilerine ve kriptografiye meraklı bir araştırmacıyım.
       </p>
       <a href={`${base}tr/about/`} class="btn">Hakkımda</a>
-      <a href={`${base}tr/blog/`} class="btn btn-ghost">Blogu oku</a>
+      <a href={`${base}tr/blog/`} class="btn btn-ghost">Bloğu Oku</a>
     </section>
 
     <div class="home-sections">
       <a href={`${base}tr/about/`} class="home-section-link">
         <p class="label">01</p>
         <h3>Hakkımda</h3>
-        <p>Kim olduğum, ne yaptığım ve beni ne harekete geçiriyor.</p>
       </a>
       <a href={`${base}tr/cv/`} class="home-section-link">
         <p class="label">02</p>
-        <h3>ÖZGEÇMİŞ</h3>
-        <p>Deneyim, eğitim ve beceriler.</p>
+        <h3>Özgeçmiş</h3>
       </a>
       <a href={`${base}tr/blog/`} class="home-section-link">
         <p class="label">03</p>
         <h3>Blog</h3>
-        <p>İlginç bulduğum konularda yazılar.</p>
       </a>
     </div>
   </div>

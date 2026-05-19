@@ -2,13 +2,14 @@
 import Base from '../layouts/Base.astro';
 const base = import.meta.env.BASE_URL;
 ---
-<Base title="Your Name" lang="en">
+
+<Base title="Yasin Şimşek" lang="en">
   <div class="container">
     <section class="hero">
       <p class="hero-label">Portfolio & Blog</p>
       <h1>Hello, I'm <em>Yasin Şimşek</em></h1>
       <p>
-        A researcher interested in blockchain and cryptography.
+        A researcher interested in blockchain technologies and cryptography.
       </p>
       <a href={`${base}about/`} class="btn">About me</a>
       <a href={`${base}blog/`} class="btn btn-ghost">Read the blog</a>
@@ -18,17 +19,14 @@ const base = import.meta.env.BASE_URL;
       <a href={`${base}about/`} class="home-section-link">
         <p class="label">01</p>
         <h3>About</h3>
-        <p>Who I am, what I do, and what drives me.</p>
       </a>
       <a href={`${base}cv/`} class="home-section-link">
         <p class="label">02</p>
         <h3>CV</h3>
-        <p>Experience, education, and skills.</p>
       </a>
       <a href={`${base}blog/`} class="home-section-link">
         <p class="label">03</p>
         <h3>Blog</h3>
-        <p>Writing on topics I find interesting.</p>
       </a>
     </div>
   </div>

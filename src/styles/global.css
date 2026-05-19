@@ -338,7 +338,6 @@ footer {
 
 .hero p {
   font-size: 1.1rem;
-  max-width: 520px;
   color: var(--muted);
   margin-bottom: 2rem;
 }
