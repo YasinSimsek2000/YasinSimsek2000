@@ -1,6 +1,15 @@
 ---
 import Base from '../layouts/Base.astro';
 const base = import.meta.env.BASE_URL;
+
+const galleryFiles = await Astro.glob('../content/en/gallery.md');
+const images: { src: string }[] = galleryFiles[0]?.frontmatter?.images ?? [];
+const randomImage = images[Math.floor(Math.random() * images.length)];
+
+const posts = await Astro.glob('../content/en/blog/*.md');
+const latestPosts = posts
+    .sort((a, b) => (a.frontmatter.date < b.frontmatter.date ? 1 : -1))
+    .slice(0, 3);
 ---
 
 <Base title="Yasin Şimşek" lang="en">
@@ -11,23 +20,42 @@ const base = import.meta.env.BASE_URL;
       <p>
         A researcher interested in blockchain technologies and cryptography.
       </p>
-      <a href={`${base}about/`} class="btn">About me</a>
-      <a href={`${base}blog/`} class="btn btn-ghost">Read the blog</a>
     </section>
 
     <div class="home-sections">
-      <a href={`${base}about/`} class="home-section-link">
-        <p class="label">01</p>
-        <h3>About</h3>
+      <a href={`${base}gallery/`} class="home-section-link">
+        <p class="label">Gallery</p>
+        {randomImage && (
+            <img
+                src={`${base}${randomImage.src}`}
+                alt=""
+                style="width:100%;aspect-ratio:16/9;object-fit:cover;margin-top:0.75rem;"
+            />
+        )}
       </a>
-      <a href={`${base}cv/`} class="home-section-link">
-        <p class="label">02</p>
-        <h3>CV</h3>
-      </a>
-      <a href={`${base}blog/`} class="home-section-link">
-        <p class="label">03</p>
-        <h3>Blog</h3>
-      </a>
+
+      <div class="home-section-link" style="cursor:pointer;" onclick={`window.location='${base}blog/'`}>
+        <p class="label">Latest Posts</p>
+        <ul
+            style={{
+              listStyle: "none",
+              marginTop: "0.75rem",
+              display: "flex",
+              flexDirection: "column",
+              gap: "0.5rem",
+            }}
+        >
+          {latestPosts.map((post) => (
+              <li>
+                <a href={`/blog/${post.url}`}>
+                  <h3>{post.frontmatter.title}</h3>
+                  <p>{post.frontmatter.description}</p>
+                  <p>{post.frontmatter.date}</p>
+                </a>
+              </li>
+          ))}
+        </ul>
+      </div>
     </div>
   </div>
 </Base>
