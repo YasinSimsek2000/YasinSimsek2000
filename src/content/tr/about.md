@@ -10,5 +10,4 @@ Blokzincir teknolojilerine ve kriptografiye meraklı bir araştırmacıyım.
 
 ## İletişim
 
-- GitHub: https://github.com/yasinsimsek29
 - Mail: yasinsimsek29@protonmail.com

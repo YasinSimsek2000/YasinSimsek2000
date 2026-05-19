@@ -10,5 +10,4 @@ I am a researcher interested in blockchain technologies and cryptography.
 
 ## Get in Touch
 
-- GitHub: https://github.com/yasinsimsek29
 - Mail: yasinsimsek29@protonmail.com
