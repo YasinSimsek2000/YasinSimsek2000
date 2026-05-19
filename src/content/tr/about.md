@@ -1,8 +1,8 @@
-## Merhaba, ben Yasin Şimşek
+## Merhaba, ben Yasin Şimşek!
 
 Blokzincir teknolojilerine ve kriptografiye meraklı bir araştırmacıyım.
 
-## Neler yapıyorum
+## Neler Yapıyorum?
 
 - Blokzincir teknolojileri üzerine araştırmalar & geliştirmeler
 - Kriptografi uygulamaları
@@ -10,5 +10,5 @@ Blokzincir teknolojilerine ve kriptografiye meraklı bir araştırmacıyım.
 
 ## İletişim
 
-- GitHub: https://github.com/YasinSimsek2000
+- GitHub: https://github.com/yasinsimsek29
 - Mail: yasinsimsek29@protonmail.com
