@@ -1,7 +1,13 @@
 ---
 images:
-  - src: public/images/favicon.svg
-    caption: Name
+  - src: public/images/1.jpeg
+    caption: Yenice, Gümüşhane
+  - src: public/images/2.jpg
+    caption: Boğaziçi, İstanbul
+  - src: public/images/3.jpg
+    caption: Topkapı, İstanbul
+  - src: public/images/4.jpg
+    caption: Boğaziçi, İstanbul
 ---
 
 <!--
